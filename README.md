@@ -30,6 +30,12 @@ LangGraph-based AI agent for generating marketing content including promotional 
 - **Google Cloud version**: Standard GPU is sufficient
 - **Open-source version**: Requires A100 GPU (40GB VRAM) - select via Runtime → Change runtime type → A100
 
+## Sample Output
+
+Generated with the open-source model using prompt: "toronto coffee shop"
+
+![Toronto Coffee Shop](img/toronto_coffee_shop.png)
+
 ## Usage
 
 Once running, the agent will:

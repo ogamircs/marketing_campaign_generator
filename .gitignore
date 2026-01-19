@@ -11,6 +11,10 @@ voiceover_*.wav
 final_video_*.mp4
 generated_image.png
 
+# Allow sample images in img folder
+!img/
+!img/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

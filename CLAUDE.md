@@ -56,7 +56,7 @@ START → get_user_input → expand_prompt → ask_generation_mode
 **Open-Source Version:**
 - `LLM_MODEL = "Qwen/Qwen2.5-7B-Instruct"` (4-bit quantized)
 - `IMAGE_MODEL = "black-forest-labs/FLUX.1-dev"`
-- `VIDEO_MODEL = "THUDM/CogVideoX-5b"`
+- `VIDEO_MODEL = "Lightricks/LTX-Video"` (fast real-time generation)
 - `TTS_MODEL = "hexgrad/Kokoro-82M"`
 
 ## Running the Notebooks

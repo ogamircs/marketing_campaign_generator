@@ -15,7 +15,7 @@ LangGraph-based AI agent for generating marketing content including promotional 
 | Notebook | Models | Requirements |
 |----------|--------|--------------|
 | `langgraph_marketing_agent.ipynb` | Google Cloud (Gemini, Imagen 3.0, Veo 3.1) | Google Cloud project with Vertex AI |
-| `langgraph_marketing_agent_opensource.ipynb` | Open-source (Qwen2.5-7B, FLUX.1-dev, CogVideoX-5b, Kokoro) | A100 GPU (40GB VRAM) |
+| `langgraph_marketing_agent_opensource.ipynb` | Open-source (Qwen2.5-7B, FLUX.1-dev, LTX-Video, Kokoro) | A100 GPU (40GB VRAM) |
 
 ## Running in Google Colab
 

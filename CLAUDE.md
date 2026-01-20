@@ -7,7 +7,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a LangGraph-based AI agent for generating marketing content (images, videos, and voice-overs). The project provides two notebook implementations:
 
 - **langgraph_marketing_agent.ipynb** - Uses Google Cloud Vertex AI (Gemini, Imagen 3.0, Veo 3.1)
-- **langgraph_marketing_agent_opensource.ipynb** - Uses 100% open-source models (Qwen2.5-7B, FLUX.1-dev, CogVideoX-5b, Kokoro TTS)
+- **langgraph_marketing_agent_opensource.ipynb** - Uses 100% open-source models (Qwen2.5-7B, FLUX.1-dev, Mochi 1, Kokoro TTS)
 
 ## Architecture
 
@@ -39,7 +39,7 @@ START → get_user_input → expand_prompt → ask_generation_mode
 2. **Tool Functions**:
    - `expand_prompt()` - Uses LLM to transform brief input into detailed generation prompts
    - `generate_poster()` - Image generation (Imagen 3.0 or FLUX.1-dev)
-   - `generate_video()` - Video generation (Veo 3.1 or CogVideoX-5b)
+   - `generate_video()` - Video generation (Veo 3.1 or Mochi 1)
    - `generate_voiceover()` - TTS for narration (Kokoro, open-source only)
    - `combine_video_audio()` - Merges video with voice-over (MoviePy)
    - `modify_prompt()` - Refines prompts based on user feedback
@@ -56,7 +56,7 @@ START → get_user_input → expand_prompt → ask_generation_mode
 **Open-Source Version:**
 - `LLM_MODEL = "Qwen/Qwen2.5-7B-Instruct"` (4-bit quantized)
 - `IMAGE_MODEL = "black-forest-labs/FLUX.1-dev"`
-- `VIDEO_MODEL = "Lightricks/LTX-Video"` (fast real-time generation)
+- `VIDEO_MODEL = "genmo/mochi-1-preview"` (highest quality open-source video)
 - `TTS_MODEL = "hexgrad/Kokoro-82M"`
 
 ## Running the Notebooks
@@ -70,7 +70,7 @@ Both notebooks are designed for Google Colab:
 
 **GPU Requirements:**
 - Google Cloud version: Standard GPU
-- Open-source version: A100 GPU (40GB VRAM) recommended
+- Open-source version: H100 GPU (80GB VRAM) recommended for Mochi 1
 
 ## Critical Video Prompt Constraints
 

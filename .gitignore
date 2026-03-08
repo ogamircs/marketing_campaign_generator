@@ -10,6 +10,7 @@ promotional_video_*.mp4
 voiceover_*.wav
 final_video_*.mp4
 generated_image.png
+AGENTS.md
 
 # Allow sample images in img folder
 !img/

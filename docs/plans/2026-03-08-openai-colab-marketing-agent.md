@@ -14,7 +14,7 @@
 
 **Files:**
 - Create: `langgraph_marketing_agent_openai.ipynb`
-- Reference: `langgraph_marketing_agent.ipynb`
+- Reference: `langgraph_marketing_agent_gemini.ipynb`
 
 **Step 1: Write the failing validation**
 

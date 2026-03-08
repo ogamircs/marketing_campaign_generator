@@ -15,9 +15,9 @@ The open-source notebook extends that flow with optional voice-over narration an
 
 | Notebook | Stack | Outputs | Requirements |
 | --- | --- | --- | --- |
-| `langgraph_marketing_agent.ipynb` | Vertex AI with Gemini 2.5 Flash, Imagen 3.0, and Veo 3.1 Fast | Image and video | Google Cloud project with Vertex AI access |
+| `langgraph_marketing_agent_gemini.ipynb` | Vertex AI with menu-selectable Gemini 2.5, Imagen 3.0, and Veo 3.1 models | Image and video | Google Cloud project with Vertex AI access |
 | `langgraph_marketing_agent_openai.ipynb` | OpenAI with GPT-5 mini, GPT Image 1.5, and Sora 2 | Image and video | OpenAI API key, Sora access for video generation, Google Colab |
-| `langgraph_marketing_agent_opensource.ipynb` | Qwen2.5-7B-Instruct, FLUX.1-dev, Mochi 1, and Kokoro-82M | Image, video, voice-over, and combined video+audio | Google Colab with H100 GPU recommended |
+| `langgraph_marketing_agent_opensource.ipynb` | Menu-selectable local Qwen/FLUX defaults with Mochi 1 and Kokoro-82M | Image, video, voice-over, and combined video+audio | Google Colab with H100 GPU recommended |
 
 ## How It Works
 
@@ -37,8 +37,10 @@ In practice, this makes the repo a notebook-first demo of an interactive creativ
 ### Vertex AI notebook
 
 - `GEMINI_MODEL = "gemini-2.5-flash"`
-- `IMAGE_MODEL = "imagen-3.0-generate-001"`
+- `IMAGE_MODEL = "imagen-3.0-generate-002"`
 - `VIDEO_MODEL = "veo-3.1-fast-generate-001"`
+
+The Vertex AI notebook now includes Colab model-selection menus for Gemini, Imagen, and Veo, and it prints the full expanded image/video prompts with readable line wrapping.
 
 ### OpenAI notebook
 
@@ -56,7 +58,7 @@ The OpenAI notebook keeps the same interactive LangGraph flow as the Vertex AI v
 - `VIDEO_MODEL = "genmo/mochi-1-preview"`
 - `TTS_MODEL = "hexgrad/Kokoro-82M"`
 
-The open-source notebook runs locally in Colab, pre-downloads large model weights, and is tuned for high-memory GPUs because Mochi 1 video generation is heavy.
+The open-source notebook runs locally in Colab, pre-downloads large model weights, and is tuned for high-memory GPUs because Mochi 1 video generation is heavy. It now also exposes safe Colab model-selection menus for the local LLM and image model families, plus the same wrapped prompt display used in the OpenAI notebook.
 
 ## Running In Google Colab
 
@@ -88,7 +90,7 @@ Video prompts in this project must not include people, humans, faces, hands, or 
 
 ## Repo Layout
 
-- `langgraph_marketing_agent.ipynb`: Vertex AI implementation
+- `langgraph_marketing_agent_gemini.ipynb`: Vertex AI implementation
 - `langgraph_marketing_agent_openai.ipynb`: OpenAI implementation for Colab
 - `langgraph_marketing_agent_opensource.ipynb`: open-source implementation with voice-over support
 - `img/toronto_coffee_shop.png`: sample generated output

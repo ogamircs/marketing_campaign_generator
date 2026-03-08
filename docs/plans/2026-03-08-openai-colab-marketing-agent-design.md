@@ -2,7 +2,7 @@
 
 ## Goal
 
-Create a new Google Colab notebook that preserves the structure and interactive LangGraph flow of `langgraph_marketing_agent.ipynb` while replacing the backend with OpenAI APIs:
+Create a new Google Colab notebook that preserves the structure and interactive LangGraph flow of `langgraph_marketing_agent_gemini.ipynb` while replacing the backend with OpenAI APIs:
 
 - `gpt-5-mini` for prompt expansion and prompt revision
 - `gpt-image-1` for poster generation

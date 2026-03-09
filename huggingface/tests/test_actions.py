@@ -74,6 +74,17 @@ class ActionTests(unittest.TestCase):
         self.assertIsNone(updated["image_path"])
         self.assertIsNone(updated["video_path"])
 
+    def test_generate_prompts_resets_generation_gate_for_a_new_brief(self):
+        service = FakeService()
+        state = build_initial_session_state()
+        state["has_generated_assets"] = True
+        state["image_path"] = "/tmp/old.png"
+        state["video_path"] = "/tmp/old.mp4"
+
+        updated = generate_prompts(state, "New bakery brief", "both", service)
+
+        self.assertFalse(updated["has_generated_assets"])
+
     def test_refine_prompts_requires_existing_prompt_context(self):
         service = FakeService()
         state = build_initial_session_state()

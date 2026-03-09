@@ -38,6 +38,7 @@ def generate_prompts(state: dict, brief: str, mode: str, service) -> dict:
             "feedback": "",
             "image_prompt": prompts.get("image_prompt", ""),
             "video_prompt": prompts.get("video_prompt", ""),
+            "has_generated_assets": False,
             "image_path": None,
             "video_path": None,
             "video_download_path": None,

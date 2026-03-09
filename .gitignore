@@ -154,6 +154,16 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+*.env
+*.env.*
+*.env.local
+cloud.env
+agents.env
+stuff.env
+stuff*.env
+!.env.example
+!*.env.example
 .envrc
 .venv
 env/
@@ -223,3 +233,4 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+docs/plans/
